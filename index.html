@@ -1,9 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Eclipse Debugging Presentation</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Eclipse Debugging Tutorial</title>    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
-<body>
-	<h1>Hello World</h1>
+
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
+        <h1 class="only">Eclipse Debugging</h1>
+    </div>
+
+    <div class="step slide" data-x="-1000" data-y="-500" data-z=1000>
+        <h1>What is Debugging?</h1>
+        <div class="content">
+            <p>Debugging allows you to run a program interactively while watching the source code and the variables during the execution.</p>
+            <p>Eclipse allows you to start a Java program in Debug mode.</p>
+            <p>Eclipse has a special Debug perspective which gives you a preconfigured set of views. In this perspective you control the execution process of your program and can investigate the state of the variables.</p>
+        </div>
+    </div>
+
+    <div class="step slide" data-x="0" data-y="-1500" data-rotate=90>
+        <h1>Breakpoints</h1>
+        <div class="content">
+            <p>Breakpoints actually allow the program to run in debug mode by pausing the execution wherever it is set.</p>
+            <h2><u>Setting Breakpoint</u></h2>
+            <ul>
+                <li>Right click on the left margin of any line of code.</li>
+                <li>Then click on 'Toggle Breakpoint'</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="step slide" data-x="0" data-y="-500" data-z="-1000">
+        <h1>Debug Program</h1>
+        <div class="content">
+            <ul>
+                <li>Right click on the project name.</li>
+                <li>Select 'Debug As'</li>
+                <li>'Java Application'</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="step slide" data-x="1000" data-y="-1500" data-rotate="-90">
+        <h1>Control Execution</h1>
+        <div class="content">
+            <ul>
+                <li><b>F5</b>: Executes the currently selected line and goes to the next line in your program. If the selected line is a method call the debugger steps into the associated code.</li>
+                <li><b>F6</b>: Steps over the call, i.e. it executes a method without stepping into it in the debugger.</li>
+                <li><b>F7</b>: Steps out to the caller of the currently executed method. This finishes the execution of the current method and returns to the caller of this method.</li>
+                <li><b>F8</b>: Tells the Eclipse debugger to resume the execution of the program code until is reaches the next breakpoint or watchpoint.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="step slide" data-x="1000" data-y="-500">
+        <h1>Inspecting Views</h1>
+        <div class="content">
+            <ul>
+                <li>Breakpoints View</li>
+                <li>Evaluate variables in Debugger</li>
+                <li>Breakpoint Properties</li>
+                <li>Exception Breakpoints</li>
+                <li>Method Breakpoint</li>
+                <li>Environment Variables</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="step slide" data-x="2000" data-y="-1500">
+        <h1 class="only">Thank You</h1>
+        <p class="credits">Using <a href="https://github.com/bartaz/impress.js/">impress.js</a></p>
+    </div>
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
 </body>
 </html>
