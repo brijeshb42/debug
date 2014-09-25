@@ -3,4 +3,4 @@ debug
 
 eclipse debugging PPT
 
-[http://bitwiser/debug/](http://bitwiser/debug/)
+[http://bitwiser.in/debug/](http://bitwiser.in/debug/)
